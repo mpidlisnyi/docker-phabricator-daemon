@@ -1,0 +1,20 @@
+{
+    "daemonize": false,
+    "daemons": [
+        {
+            "class": "PhabricatorRepositoryPullLocalDaemon"
+        },
+        {
+            "class": "PhabricatorTriggerDaemon"
+        },
+        {
+            "autoscale": {
+                "group": "task",
+                "pool": 4,
+                "reserve": 0
+            },
+            "class": "PhabricatorTaskmasterDaemon"
+        }
+    ],
+    "log": "/dev/stdout"
+}
